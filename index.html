@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Milligate – Tickets für Events in Österreich</title>
+<meta name="description" content="Milligate ist die Ticket-App für Events in Österreich. Tickets in Sekunden kaufen, als QR-Code in der App oder Wallet vorzeigen – und für Veranstalter: Events anlegen, verkaufen, Einlass scannen.">
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAAJLklEQVR42u1aW2wcVxn+/v+cmZ3ZXa8dO46TpjclNKRVQvsA5SJBq6pC4g0eeOIBhBAS4qEPCAkQvIEEL5VAAokXhACJgigSagWoBXoBWkpbek9oS5M0rWni+BavvbO7M+d8PMzaWXt3ZzdJI9eoo5W1czxz5vsv33+ble9d+zh28mGdYGcL4He6AE4ICMDN6ztmJXch9gi2Y1b+H1zoXQG2OwpxB8MXWKdAHoe20GOHrFgnm/+HntN39spIUUi0NxgLSPr+Zl2/fvNdBNkvHub7Sy/GAfv3S2RFBz3SxPc+WAw00t70Qkff6AsTJlJon//4lqfrc31QUpHLiEICeCKMdN/hsnTvREIkq7vVk00x0i0DPW3FVg9HW3kF0LH+SsKsR9lk9WDZlE2+bfdWZ04lLiXkUmshNbK6lN75mas+/50btiZBwdkHlx/9+LFg3NJx3RMkrbvpj1Zvv/dI727peffA0Wdb51IJLsgsiqzh7/jFoclbx3pl/uFdxx+7b646HnjHS7EABQ4IKwaAd1QjG7oRIyRyl+Zm0dglZLfA9P0pQCD39XzbjlM5qpGgrA5wggItF3JA4JSZ37ZE4QgndMKCZFUYhQReQCH6B48rfnjpqL/YAkUCZIU3X3EBACfDXahIACfYxkqD6+gLQBa5kCi8cDstIPRaaAGBdVpMYnCbXYheWAByuAttpwUUTuAUg9NAsQttOwfeFhJvKwdGIPGQRCb0A2zAK6z7DQ7kn0t0IS+Agv1uVxl0lwykZL99PJn6PnUzCRPK5SYybzC/mG6BRALkW+cabfiwiyQEjZXl+WbqvBURSF4OkSSxsNRcWm6O2aDbpCq66lqnztRnfM0TZrP6ls6nNMhQJIDmLOn7SclSxTzx5OLiYtsY8Z45egIi8vNf//uctiOqA5mb23MsDh54efaJR94SlbTtvaN3zDKqyv2/PfHc6vKYsRk7VV0GxtDTmvzmV69Kl0GdozEyN9d68umlUsVkYAFIc811n6OAAopQQOH6KQhRK8v19OSpxu237Q5DzSt2Vfnl3cfu+dHx+pi/3lXGEQgkgMQwL+jKw5g//tjCRz6xf2I6EhVRMUae/vOZu+/65xthcxrhfkYCsZAY5k02/xLPH39+cddkdORDu70nIKrSaLhvfPOl/5xYK0XGkwMRisiHP/ZwMZ/USL2e3XR47Pt3v2/3VJisZt/90j8evOdktRa24cdob/Hje1DK4F+TxkuyYlVbjWzXnuhTXzx05IPTWds//sDsvT99xTg5EFRbdNMsHWQFwKwkz8n5lvgAurLc/vSX3/uVH9wqwGsnG1/9+gunTjUqVVvQCYw6F3KelZo99mp9cbG9Z7pUX24/8rvT8VhAMKCsIXtI5816J1CC0jMq25XF9o+/9YxYbdFZJzfXdh0NxmekfDZo35u+/gyXBXBACWopMAhL+tRDZ0iokVOnGy++XJ/ZE6Wpx9CW0uvQ0QtSMiwbYwWAqlTHw0Y9hRECBlKGEuy0oHkb46GBhFNB7M0hVI/IeA3hmuUbNvWBvT4Zfz1ZDtQA8CABIUiUq0H+xCCUUtlk5FBsAOwm5heE5K7Y0W1WAuxqwhSSwbfha97e7MdulFrVhKvWz9ossWhZNq0rlao2rfuePmljxRNOQAOMkEMtVUbLLCy2kkA8mMDtYnATaoekFlu7Yv2bNmtatAwSy8SwGbAhIsZ4lw7MGAIaUEeaGVqaUUvzvvrI11LQwZegt3H3Ia0ZY1asn7dZy6JpkRgmlvmXZqSNc3XfaEloBupEQCMwIxXCljpibpctFUR+3ob3wHWMxxA01N8YTC5bt2qzlkHTMslBWyQb30PnpsJ40Uo2eF4ioIKKES0wmgvJpqENgBa8ANcwPoqJq7UsgX2OS0+a5elorG7ZNOho3TIxTCyalu1QXAQ3U67fEAcLzam/ztH2KXcpQiM08vZaYOvpAVaOYmKfidtW5q1r2lSklGi6UOaqbGidiUEzYBpKFqkvi4vExZKVzdrBWvnESvl04kt9EFyUBUbkQEcfCrThP4DJW83UivFnrW9YtiwSw3YYpGk269Z8LWqoz7WelsTF6uIcurpYXCwuRHuXmb998tqfzXIQiUfmwMgutDG7JZqGZ2O/ZLK2kQsEDX1dfSNtZ+WoBaYXEKuLJMuhx+JL4kJpTZu5O8b33j8XnM8YypaAQSNvdxTqpCgQsJCX/cpYaaxtpGF97i1Ni8T4pFrKUm2bNJ0IfIQs1txnOhYoiY+kNWmymimdbe27b96uOBpRXpYFhr1PEBDgOoNJqEji2ifcanViYhVZ0/jEILFsBUiraurenm+tHpryhq58AbqLpT1ls4qWX0+uvmdx99/O25XMVfrrL+fAKG88LMxo71mlK+oJVHVxrV6XLJ0qN8u2Zbih7Oa+MlyUToiL1EXiSnBlbU1ZH6H6SmPmj4uTT6yYNecqxtWseOalf/5Zrx8BI9gchQYhHB6FROA8fVcqdo7eM21l6eqSS5KV9+/t+EmkLkI6YUtnk8qz9f9+cgbwrSlLi9qL9Zk/LOz616q2mVU0qxjxxHrtQMI5uvUKZb2TBExeKhX1r8M5kDrGkcklyf9GZQtArWqqyd5I9wcIgVgQCSJhWbM9lXTKhOPqIjNzbG3v7xfGX1wD4SYCCmxP/6gqJEpxB4pRicomiGQt8dZocfsth7/w90Fv81WlnmR33jL17c8eFMHu8TAw4hyX5pokc7dysemkQlkvNwRU8YFoSpDRmTaIjq8PGHRL3gEHOrknAtBs+4V6CuBrP3n10ReWqrHt1HlbEArAYgso2uSB/fFVU6WNNWNk9754pMhlAQAHwosdSUSh7p8qAbh+X/yn5xeLi6IiAaiAgQNJZJ5B1wuObopwSDvBUScw0ploEMgcrYoHh8bTokRGFbGy1MhEEHSVTLL5FhmOCxf59rrzuKXEidXijCbvueuxgo1IGJUDM5FRIXGxUC55rCWCzPHEXOL9kIdaaucC9ig1vzcDn59d24YRqSAKVMyFt229CJknMr95KW9tu0kfW4uea3iFV/KJmN+Mpxeh3ZKxB3zhdv2WYxiwkYu5d+wxajn9DhZg51tgpwtg5F0LvMuBy49C0hNid8pKZ7i7c3+6u+M58D8ValWw7rhOPQAAAABJRU5ErkJggg==">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --violet:#8B1FC8;
+  --violet-2:#8B5CF6;
+  --blue:#1E8FD0;
+  --ink:#14141F;
+  --muted:#6B6B80;
+  --line:#E9E9F2;
+  --soft:#F7F7FB;
+  --white:#FFFFFF;
+  --grad:linear-gradient(160deg,#8B1FC8 0%,#4B33BE 48%,#1E8FD0 100%);
+  --radius:18px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;font-family:'Nunito',Helvetica,Arial,sans-serif;color:var(--ink);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--violet-2);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+header.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:21px;color:var(--ink)}
+.brand:hover{text-decoration:none}
+.brand img{width:36px;height:36px;border-radius:10px}
+nav.links{display:flex;gap:22px;align-items:center}
+nav.links a{color:var(--ink);font-weight:700;font-size:15px}
+nav.links a.cta{background:var(--ink);color:#fff;padding:9px 16px;border-radius:999px}
+nav.links a.cta:hover{text-decoration:none;opacity:.9}
+.menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:10px;padding:8px 12px;font:inherit;font-weight:800;color:var(--ink);cursor:pointer}
+.hero{background:var(--grad);color:#fff;position:relative;overflow:hidden;padding:0}
+.hero::after{content:"";position:absolute;inset:auto -10% -45% auto;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.16),rgba(255,255,255,0) 65%);pointer-events:none}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding-top:84px;padding-bottom:92px;position:relative;z-index:1}
+.eyebrow{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);padding:6px 14px;border-radius:999px;font-weight:800;font-size:13px;letter-spacing:.3px}
+.hero h1{font-size:clamp(34px,5vw,56px);line-height:1.08;margin:18px 0 18px;font-weight:900;letter-spacing:-.5px}
+.hero p.lead{font-size:clamp(17px,2vw,20px);opacity:.95;margin:0 0 30px;max-width:560px}
+.store-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.store{display:inline-flex;align-items:center;gap:10px;background:#000;color:#fff;border-radius:12px;padding:10px 18px;min-width:186px;border:1px solid rgba(255,255,255,.25)}
+.store small{display:block;font-size:11px;opacity:.75;line-height:1.1}
+.store strong{display:block;font-size:17px;line-height:1.2}
+.store svg{width:24px;height:24px;flex:none}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;color:#fff;font-weight:800;padding:12px 18px;border-radius:12px;border:1.5px solid rgba(255,255,255,.55)}
+.btn-ghost:hover{background:rgba(255,255,255,.1);text-decoration:none}
+.hero-note{margin-top:14px;font-size:13px;opacity:.8}
+.phone{justify-self:center;width:280px;max-width:100%;aspect-ratio:9/18.5;background:#0E0E18;border-radius:42px;padding:12px;box-shadow:0 30px 80px rgba(10,5,40,.45),inset 0 0 0 2px rgba(255,255,255,.08)}
+.screen{width:100%;height:100%;border-radius:32px;background:#14141F;overflow:hidden;display:flex;flex-direction:column;padding:22px 18px;gap:14px;color:#fff}
+.screen .s-title{font-size:12px;opacity:.6;font-weight:700;letter-spacing:.4px}
+.screen .s-event{font-size:19px;font-weight:900;line-height:1.2}
+.screen .s-meta{font-size:12px;opacity:.7}
+.ticket{background:#fff;color:var(--ink);border-radius:18px;padding:16px;display:flex;flex-direction:column;align-items:center;gap:10px}
+.qr{width:150px;height:150px;display:grid;grid-template-columns:repeat(21,1fr);gap:0;background:#fff}
+.qr i{display:block;background:#14141F}
+.qr b{display:block}
+.ticket .t-row{display:flex;justify-content:space-between;width:100%;font-size:11px;color:var(--muted);font-weight:700}
+.ticket .t-row span:last-child{color:var(--ink)}
+.wallet{margin-top:auto;background:#000;border-radius:12px;padding:10px;text-align:center;font-size:12px;font-weight:800;border:1px solid rgba(255,255,255,.18)}
+section{padding:88px 0}
+section.alt{background:var(--soft)}
+.sec-head{max-width:680px;margin-bottom:40px}
+.sec-head .kicker{color:var(--violet-2);font-weight:900;font-size:13px;letter-spacing:1.2px;text-transform:uppercase}
+.sec-head h2{font-size:clamp(28px,3.4vw,40px);line-height:1.15;margin:8px 0 12px;font-weight:900;letter-spacing:-.3px}
+.sec-head p{color:var(--muted);font-size:18px;margin:0}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.card .ico{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(160deg,rgba(139,31,200,.12),rgba(30,143,208,.12));margin-bottom:16px}
+.card .ico svg{width:24px;height:24px;stroke:var(--violet-2)}
+.card h3{margin:0 0 6px;font-size:19px;font-weight:800}
+.card p{margin:0;color:var(--muted)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.checklist{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+.checklist li{display:flex;gap:12px;align-items:flex-start;font-size:17px}
+.checklist li svg{flex:none;width:24px;height:24px;margin-top:2px}
+.org-panel{background:var(--grad);border-radius:24px;padding:34px;color:#fff;box-shadow:0 20px 60px rgba(75,51,190,.25)}
+.org-panel h3{margin:0 0 6px;font-size:24px;font-weight:900}
+.org-panel p{margin:0 0 22px;opacity:.92}
+.steps{display:grid;gap:12px;margin-bottom:26px}
+.step{display:flex;gap:14px;align-items:center;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:14px;padding:12px 14px;font-weight:700}
+.step b{width:28px;height:28px;border-radius:50%;background:#fff;color:#4B33BE;display:grid;place-items:center;font-size:14px;flex:none}
+.btn-white{display:inline-flex;align-items:center;gap:8px;background:#fff;color:#4B33BE;font-weight:900;padding:13px 20px;border-radius:12px}
+.btn-white:hover{text-decoration:none;opacity:.92}
+.support-grid{display:grid;grid-template-columns:1.4fr .9fr;gap:28px;align-items:start}
+details{background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:10px;overflow:hidden}
+summary{list-style:none;cursor:pointer;padding:18px 20px;font-weight:800;font-size:17px;display:flex;justify-content:space-between;gap:16px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:22px;color:var(--violet-2);font-weight:700;line-height:1;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details .ans{padding:0 20px 18px;color:#3c3c4e}
+details .ans p{margin:0 0 8px}
+.contact{position:sticky;top:96px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.contact h3{margin:0 0 6px;font-size:21px;font-weight:900}
+.contact p{color:var(--muted);margin:0 0 18px}
+.mailbtn{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--grad);color:#fff;font-weight:900;padding:14px;border-radius:12px;word-break:break-all}
+.mailbtn:hover{text-decoration:none;opacity:.94}
+.contact .small{font-size:14px;color:var(--muted);margin-top:16px}
+.contact ul{padding-left:18px;margin:8px 0 0;color:var(--muted);font-size:14px}
+.legal{max-width:820px}
+.legal h2{font-size:30px;font-weight:900;margin:0 0 6px}
+.legal .stand{color:var(--muted);margin:0 0 26px}
+.legal h3{font-size:19px;margin:28px 0 8px;font-weight:800}
+.legal p,.legal li{color:#34344a}
+.legal ul{padding-left:20px}
+.legal table{width:100%;border-collapse:collapse;margin:10px 0 6px;font-size:15px}
+.legal th,.legal td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--line)}
+.legal th{background:var(--soft);font-weight:800}
+.imp{display:grid;grid-template-columns:220px 1fr;gap:10px 24px;margin:0}
+.imp dt{font-weight:800}
+.imp dd{margin:0;color:#34344a}
+footer{background:#0E0E18;color:#c9c9d6;padding:44px 0}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;align-items:center}
+footer a{color:#fff;font-weight:700}
+footer .flinks{display:flex;flex-wrap:wrap;gap:18px}
+@media (max-width:900px){
+  .hero .wrap,.split,.support-grid{grid-template-columns:1fr}
+  .phone{width:240px}
+  .grid3{grid-template-columns:1fr}
+  .contact{position:static}
+  .imp{grid-template-columns:1fr;gap:2px}
+  .imp dd{margin-bottom:12px}
+}
+@media (max-width:760px){
+  nav.links{display:none;position:absolute;top:68px;left:0;right:0;background:#fff;flex-direction:column;align-items:stretch;padding:14px 20px 20px;gap:4px;border-bottom:1px solid var(--line)}
+  nav.links.open{display:flex}
+  nav.links a{padding:10px 4px}
+  nav.links a.cta{text-align:center;margin-top:6px}
+  .menu-btn{display:block}
+  section{padding:64px 0}
+  .hero .wrap{padding-top:56px;padding-bottom:64px}
+  .legal table,.legal thead,.legal tbody,.legal tr,.legal th,.legal td{display:block}
+  .legal thead{display:none}
+  .legal tr{border-bottom:1px solid var(--line);padding:8px 0}
+  .legal td{border:0;padding:4px 0}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="data:image/png;base64,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" alt="Milligate Logo">Milligate</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menü</button>
+    <nav class="links" id="nav">
+      <a href="#fans">Für Besucher</a>
+      <a href="#veranstalter">Für Veranstalter</a>
+      <a href="#support">Hilfe &amp; Support</a>
+      <a href="#impressum">Impressum</a>
+      <a class="cta" href="https://webapp-milligate.vercel.app">Veranstalter-Login</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Ticketing aus Oberösterreich</span>
+      <h1>Dein Ticket in Sekunden – direkt aufs Handy.</h1>
+      <p class="lead">Milligate ist die Ticket-App für Konzerte, Sport und Events in Österreich. Ticket kaufen, Platz wählen, QR-Code vorzeigen – fertig. Und Veranstalter verkaufen ihre Tickets ohne Papierkram.</p>
+      <div class="store-row">
+        <span class="store" aria-label="Demnächst im App Store">
+          <svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.17-1.53 2.66-.39 6.59 1.1 8.74.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.3-.88-2.32-3.5zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.65-1.05 1.68-.92 2.67.97.08 1.96-.49 2.56-1.22z"/></svg>
+          <span><small>Demnächst im</small><strong>App Store</strong></span>
+        </span>
+        <span class="store" aria-label="Demnächst bei Google Play">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M3.6 2.2 13.4 12l-9.8 9.8c-.36-.2-.6-.6-.6-1.07V3.27c0-.47.24-.87.6-1.07z"/><path fill="#FBBC04" d="m16.8 15.4-3.4-3.4 3.4-3.4 3.86 2.2c.9.51.9 1.89 0 2.4z"/><path fill="#EA4335" d="M13.4 12 3.6 21.8c.33.19.75.2 1.13-.02l12.07-6.38z"/><path fill="#4285F4" d="M16.8 8.6 4.73 2.22A1.17 1.17 0 0 0 3.6 2.2L13.4 12z"/></svg>
+          <span><small>Demnächst bei</small><strong>Google Play</strong></span>
+        </span>
+      </div>
+      <p class="hero-note">Bezahlen mit Karte, Apple Pay oder Google Pay · Tickets auch in Apple Wallet &amp; Google Wallet</p>
+    </div>
+    <div class="phone" aria-hidden="true">
+      <div class="screen">
+        <div class="s-title">MEINE TICKETS</div>
+        <div>
+          <div class="s-event">Sommerkonzert am Hauptplatz</div>
+          <div class="s-meta">Sa, 20:00 · Linz</div>
+        </div>
+        <div class="ticket">
+          <div class="qr" id="qr"></div>
+          <div class="t-row"><span>Bereich</span><span>Tribüne A</span></div>
+          <div class="t-row"><span>Reihe · Platz</span><span>4 · 12</span></div>
+        </div>
+        <div class="wallet">Zu Wallet hinzufügen</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="fans">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Für Besucher</div>
+      <h2>Tickets kaufen, so einfach wie online shoppen.</h2>
+      <p>Kein Ausdrucken, keine Warteschlange an der Abendkassa. Alles, was du brauchst, ist dein Handy.</p>
+    </div>
+    <div class="grid3">
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div>
+        <h3>In Sekunden bezahlt</h3>
+        <p>Mit Karte, Apple Pay oder Google Pay. Sicher abgewickelt über Stripe – deine Kartendaten speichern wir nie.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v.01M14 20h.01M17 20h3v-3"/></svg></div>
+        <h3>QR-Code statt Papier</h3>
+        <p>Dein Ticket liegt sofort in der App und auf Wunsch in Apple Wallet oder Google Wallet – auch offline griffbereit.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18v-6a8 8 0 0 1 16 0v6"/><path d="M4 18h4v-4H4zM16 18h4v-4h-4z"/></svg></div>
+        <h3>Platz selbst wählen</h3>
+        <p>Sitzplatz im Saalplan, Stehplatz oder freie Platzwahl – und den Parkplatz gleich dazu buchen.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg></div>
+        <h3>Flexibel stornieren</h3>
+        <p>Plan geändert? Tickets lassen sich bis 24 Stunden vor Beginn direkt in der App stornieren – das Geld kommt automatisch zurück.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 11h-6M19 8l3 3-3 3"/></svg></div>
+        <h3>An Freunde weitergeben</h3>
+        <p>Du hast für die ganze Gruppe gekauft? Übertrag einzelne Tickets einfach an Freunde mit Milligate-Konto.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Sicher &amp; fälschungsfrei</h3>
+        <p>Jedes Ticket hat einen einmaligen Code, der beim Einlass geprüft wird. Kopien und Doppelverkäufe haben keine Chance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="veranstalter" class="alt">
+  <div class="wrap split">
+    <div>
+      <div class="sec-head" style="margin-bottom:26px">
+        <div class="kicker">Für Veranstalter</div>
+        <h2>Dein Event. Deine Tickets. Ohne Aufwand.</h2>
+        <p>Ob Vereinsfest, Konzert oder Heimspiel – mit Milligate verkaufst du Tickets professionell, ohne eigene Technik.</p>
+      </div>
+      <ul class="checklist">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg><span><strong>Event in Minuten anlegen</strong> – mit Sitzplan, Stehplätzen, Kategorien und Parkplätzen.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg><span><strong>Auszahlung direkt auf dein Konto</strong> – automatisch über Stripe, ohne Vorleistung.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg><span><strong>Einlass per Scanner-App</strong> – dein Team scannt Tickets mit dem Handy, live synchronisiert.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg><span><strong>Transparente Abrechnung</strong> – alle Verkäufe, Stornos und Auszahlungen auf einen Blick.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg><span><strong>Keine Grundgebühr</strong> – wir verdienen nur, wenn du Tickets verkaufst.</span></li>
+      </ul>
+    </div>
+    <div class="org-panel">
+      <h3>So startest du</h3>
+      <p>Von der Registrierung bis zum ersten verkauften Ticket.</p>
+      <div class="steps">
+        <div class="step"><b>1</b>Im Veranstalter-Portal registrieren</div>
+        <div class="step"><b>2</b>Auszahlungskonto bei Stripe verbinden</div>
+        <div class="step"><b>3</b>Event anlegen und zur Prüfung einreichen</div>
+        <div class="step"><b>4</b>Tickets verkaufen &amp; am Eingang scannen</div>
+      </div>
+      <a class="btn-white" href="https://webapp-milligate.vercel.app">Zum Veranstalter-Portal →</a>
+    </div>
+  </div>
+</section>
+
+<section id="support">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Hilfe &amp; Support</div>
+      <h2>Wie können wir helfen?</h2>
+      <p>Die häufigsten Fragen – und falls deine nicht dabei ist, schreib uns einfach.</p>
+    </div>
+    <div class="support-grid">
+      <div>
+        <details>
+          <summary>Wo finde ich mein Ticket?</summary>
+          <div class="ans"><p>Direkt nach dem Kauf in der Milligate-App unter <strong>„Meine Tickets“</strong>. Dort kannst du den QR-Code öffnen und das Ticket auch zu Apple Wallet oder Google Wallet hinzufügen.</p></div>
+        </details>
+        <details>
+          <summary>Ich habe keine Bestätigungsmail bekommen.</summary>
+          <div class="ans"><p>Die Bestätigung kommt normalerweise innerhalb weniger Minuten an die E-Mail-Adresse deines Milligate-Kontos. Bitte schau auch im <strong>Spam- oder Werbung-Ordner</strong> nach.</p><p>Dein Ticket ist unabhängig von der Mail gültig – es liegt in jedem Fall in der App unter „Meine Tickets“.</p></div>
+        </details>
+        <details>
+          <summary>Wie storniere ich ein Ticket?</summary>
+          <div class="ans"><p>Öffne das Ticket in der App und tippe auf <strong>„Ticket stornieren“</strong>. Das geht bis <strong>24 Stunden vor Beginn</strong> des Events. Hast du mehrere Tickets in einer Bestellung, kannst du sie auch einzeln stornieren – die übrigen bleiben gültig.</p></div>
+        </details>
+        <details>
+          <summary>Wann bekomme ich mein Geld zurück?</summary>
+          <div class="ans"><p>Die Erstattung wird sofort ausgelöst und geht automatisch auf das Zahlungsmittel zurück, mit dem du bezahlt hast. Je nach Bank dauert die Gutschrift in der Regel <strong>5–10 Werktage</strong>. Du bekommst zusätzlich eine Bestätigung per E-Mail.</p></div>
+        </details>
+        <details>
+          <summary>Was passiert, wenn ein Event abgesagt wird?</summary>
+          <div class="ans"><p>Sagt der Veranstalter ein Event ab, werden alle Tickets automatisch storniert und der volle Betrag erstattet. Du musst dafür nichts tun.</p></div>
+        </details>
+        <details>
+          <summary>Kann ich ein Ticket an jemand anderen weitergeben?</summary>
+          <div class="ans"><p>Ja. Öffne das Ticket und wähle <strong>„Übertragen“</strong>. Die Person braucht ein Milligate-Konto und muss die Übertragung annehmen. Danach ist das Ticket in ihrer App – und in deiner nicht mehr gültig.</p></div>
+        </details>
+        <details>
+          <summary>Welche Zahlungsmethoden gibt es?</summary>
+          <div class="ans"><p>Kredit- und Debitkarten (Visa, Mastercard), Apple Pay und Google Pay. Die Zahlung wird über unseren Zahlungsdienstleister Stripe abgewickelt. Pro Ticket fällt eine Servicegebühr von 0,99 € an, die vor dem Kauf angezeigt wird.</p></div>
+        </details>
+        <details>
+          <summary>Der QR-Code wird am Einlass nicht erkannt.</summary>
+          <div class="ans"><p>Dreh die Bildschirmhelligkeit hoch und öffne das Ticket direkt in der App statt eines Screenshots. Wenn es trotzdem nicht klappt, wende dich an das Einlasspersonal oder schreib uns mit deiner Bestellnummer.</p></div>
+        </details>
+        <details>
+          <summary>Wie lösche ich mein Konto?</summary>
+          <div class="ans"><p>In der App unter <strong>Profil → Account-Einstellungen → Konto löschen</strong>, oder per E-Mail an uns. Alle Details findest du weiter unten unter <a href="#konto-loeschen">Konto &amp; Daten löschen</a>.</p></div>
+        </details>
+        <details>
+          <summary>Ich möchte als Veranstalter Tickets verkaufen.</summary>
+          <div class="ans"><p>Registriere dich im <a href="https://webapp-milligate.vercel.app">Veranstalter-Portal</a>. Nach der Verbindung deines Auszahlungskontos bei Stripe kannst du dein erstes Event anlegen. Bei Fragen helfen wir gern persönlich weiter.</p></div>
+        </details>
+      </div>
+      <aside class="contact">
+        <h3>Kontakt</h3>
+        <p>Schreib uns – wir antworten in der Regel innerhalb von 1–2 Werktagen.</p>
+        <a class="mailbtn" href="mailto:ketaneren@gmail.com?subject=Milligate%20Support">ketaneren@gmail.com</a>
+        <p class="small">Damit wir schnell helfen können, gib bitte an:</p>
+        <ul>
+          <li>die E-Mail-Adresse deines Milligate-Kontos</li>
+          <li>die Bestellnummer (z. B. #A1B2C3D4)</li>
+          <li>eine kurze Beschreibung, gern mit Screenshot</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="datenschutz" class="alt">
+  <div class="wrap legal">
+    <h2>Datenschutzerklärung</h2>
+    <p class="stand">Stand: November 2026 · gilt für die Milligate-App, das Veranstalter-Portal und diese Website</p>
+
+    <h3>1. Verantwortlicher</h3>
+    <p>Eren Ketan, Einzelunternehmer<br>Albert-Schöpf-Straße 76, 4020 Linz, Österreich<br>E-Mail: <a href="mailto:ketaneren@gmail.com">ketaneren@gmail.com</a></p>
+
+    <h3>2. Welche Daten wir verarbeiten und warum</h3>
+    <table>
+      <thead><tr><th>Daten</th><th>Zweck</th><th>Rechtsgrundlage (DSGVO)</th></tr></thead>
+      <tbody>
+        <tr><td>E-Mail-Adresse, Name, Passwort (verschlüsselt)</td><td>Benutzerkonto, Anmeldung, Kaufbestätigungen</td><td>Art. 6 Abs. 1 lit. b (Vertrag)</td></tr>
+        <tr><td>Bestellungen, Tickets, Sitzplätze, Parkplätze</td><td>Ticketkauf, Einlass, Storno, Abrechnung mit dem Veranstalter</td><td>Art. 6 Abs. 1 lit. b (Vertrag)</td></tr>
+        <tr><td>Zahlungsdaten</td><td>Abwicklung der Zahlung durch Stripe. Kartendaten werden ausschließlich von Stripe verarbeitet, nicht von uns.</td><td>Art. 6 Abs. 1 lit. b (Vertrag)</td></tr>
+        <tr><td>Belege und Buchungsdaten</td><td>Gesetzliche Aufbewahrungspflichten (z. B. § 132 BAO)</td><td>Art. 6 Abs. 1 lit. c (rechtliche Pflicht)</td></tr>
+        <tr><td>Standort (nur wenn du es erlaubst)</td><td>Events in deiner Nähe anzeigen. Der Standort wird nur während der Nutzung verwendet und nicht gespeichert.</td><td>Art. 6 Abs. 1 lit. a (Einwilligung)</td></tr>
+        <tr><td>Push-Token</td><td>Benachrichtigungen, z. B. zu Ticket-Übertragungen oder Event-Änderungen</td><td>Art. 6 Abs. 1 lit. a (Einwilligung)</td></tr>
+        <tr><td>Daten zur Altersprüfung</td><td>Nur bei Events mit Altersgrenze: Prüfung des Alters über unseren Dienstleister Didit. Wir erhalten nur das Ergebnis, keine Ausweiskopie.</td><td>Art. 6 Abs. 1 lit. b und c</td></tr>
+        <tr><td>Werbe-ID, Geräteinformationen</td><td>Anzeige von Werbung über Google AdMob</td><td>Art. 6 Abs. 1 lit. a (Einwilligung)</td></tr>
+        <tr><td>Kamerazugriff</td><td>Scannen von QR-Codes. Es werden keine Bilder gespeichert.</td><td>Art. 6 Abs. 1 lit. b</td></tr>
+        <tr><td>Fehlerberichte und Feedback</td><td>Nur wenn du uns aktiv etwas schickst: Bearbeitung deiner Meldung</td><td>Art. 6 Abs. 1 lit. f (berechtigtes Interesse)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>3. Empfänger und Dienstleister</h3>
+    <ul>
+      <li><strong>Veranstalter</strong> des jeweiligen Events: erhält die für Einlass und Abrechnung nötigen Bestelldaten.</li>
+      <li><strong>Supabase</strong> (Datenbank, Anmeldung, Server) – Rechenzentrum in der EU (Irland).</li>
+      <li><strong>Stripe</strong> (Zahlungsabwicklung und Auszahlungen an Veranstalter).</li>
+      <li><strong>Google Firebase</strong> (Push-Benachrichtigungen) und <strong>Google AdMob</strong> (Werbung).</li>
+      <li><strong>Didit</strong> (Altersprüfung, nur bei Events mit Altersgrenze).</li>
+      <li><strong>Apple Wallet / Google Wallet</strong> – nur wenn du ein Ticket selbst zur Wallet hinzufügst.</li>
+      <li><strong>Vercel</strong> (Hosting des Veranstalter-Portals) und <strong>GitHub Pages</strong> (Hosting dieser Website).</li>
+      <li>Ein E-Mail-Dienstleister für den Versand von Bestätigungen.</li>
+    </ul>
+    <p>Mit allen Dienstleistern bestehen Verträge zur Auftragsverarbeitung bzw. sie sind selbst Verantwortliche nach der DSGVO. Bei Übermittlungen in die USA stützen wir uns auf das EU-US Data Privacy Framework oder die Standardvertragsklauseln der EU-Kommission.</p>
+
+    <h3>4. Speicherdauer</h3>
+    <p>Kontodaten speichern wir, solange dein Konto besteht. Belege und Buchungsdaten müssen wir nach österreichischem Recht 7 Jahre aufbewahren. Danach werden sie gelöscht.</p>
+
+    <h3>5. Deine Rechte</h3>
+    <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch. Erteilte Einwilligungen kannst du jederzeit widerrufen, z. B. in den Einstellungen deines Geräts. Eine Kopie deiner Daten erhältst du direkt in der App unter <strong>Account-Einstellungen → Meine Daten exportieren</strong> oder per E-Mail bei uns.</p>
+    <p>Wenn du meinst, dass wir deine Daten nicht korrekt verarbeiten, kannst du dich bei der österreichischen Datenschutzbehörde beschweren: <a href="https://www.dsb.gv.at" rel="noopener">www.dsb.gv.at</a>.</p>
+
+    <h3>6. Diese Website</h3>
+    <p>Diese Website verwendet keine Cookies und kein Tracking. Beim Aufruf verarbeitet der Hosting-Anbieter GitHub technisch notwendige Daten (z. B. IP-Adresse) zur Auslieferung und Absicherung der Seite. Schriftarten werden von Google Fonts geladen.</p>
+  </div>
+</section>
+
+<section id="konto-loeschen">
+  <div class="wrap legal">
+    <h2>Konto &amp; Daten löschen</h2>
+    <p class="stand">So löschst du dein Milligate-Konto und die damit verbundenen Daten.</p>
+
+    <h3>In der App</h3>
+    <ol>
+      <li>Milligate-App öffnen und anmelden.</li>
+      <li>Im Profil-Tab auf <strong>„Account-Einstellungen“</strong> tippen.</li>
+      <li><strong>„Konto löschen“</strong> wählen, zur Bestätigung <strong>LÖSCHEN</strong> eintippen und bestätigen.</li>
+    </ol>
+
+    <h3>Per E-Mail</h3>
+    <p>Schreib uns von der E-Mail-Adresse deines Kontos an <a href="mailto:ketaneren@gmail.com?subject=Konto%20l%C3%B6schen">ketaneren@gmail.com</a> mit dem Betreff „Konto löschen“. Wir löschen dein Konto innerhalb von 30 Tagen und bestätigen dir das per E-Mail.</p>
+
+    <h3>Was gelöscht wird – und was nicht</h3>
+    <ul>
+      <li><strong>Gelöscht:</strong> Benutzerkonto, Name, E-Mail-Adresse, Einstellungen, Push-Token und alle nicht mehr benötigten Daten.</li>
+      <li><strong>Aufbewahrt:</strong> Belege und Buchungsdaten bereits getätigter Käufe, weil wir sie gesetzlich 7 Jahre aufbewahren müssen. Sie werden anonymisiert und nicht mehr für andere Zwecke verwendet.</li>
+      <li>Noch gültige Tickets verfallen mit der Löschung. Storniere sie vorher, wenn du eine Erstattung möchtest.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="impressum" class="alt">
+  <div class="wrap legal">
+    <h2>Impressum</h2>
+    <p class="stand">Informationen gemäß § 5 E-Commerce-Gesetz und Offenlegung gemäß § 25 Mediengesetz</p>
+    <dl class="imp">
+      <dt>Betreiber</dt><dd>Eren Ketan, Einzelunternehmer</dd>
+      <dt>Anschrift</dt><dd>Albert-Schöpf-Straße 76<br>4020 Linz, Österreich</dd>
+      <dt>E-Mail</dt><dd><a href="mailto:ketaneren@gmail.com">ketaneren@gmail.com</a></dd>
+      <dt>Unternehmensgegenstand</dt><dd>Entwicklung und Betrieb von Software, insbesondere der Ticket-Plattform Milligate</dd>
+      <dt>Gewerbe</dt><dd>Dienstleistungen in der automatischen Datenverarbeitung und Informationstechnik</dd>
+      <dt>Gewerbebehörde</dt><dd>Magistrat der Landeshauptstadt Linz</dd>
+      <dt>Kammer</dt><dd>Mitglied der Wirtschaftskammer Oberösterreich</dd>
+      <dt>Anwendbare Vorschriften</dt><dd>Gewerbeordnung, abrufbar unter <a href="https://www.ris.bka.gv.at" rel="noopener">www.ris.bka.gv.at</a></dd>
+      <dt>Umsatzsteuer</dt><dd>Kleinunternehmer gemäß § 6 Abs. 1 Z 27 UStG</dd>
+      <dt>Blattlinie</dt><dd>Informationen über die Ticket-Plattform Milligate</dd>
+    </dl>
+    <h3>Hinweis zu Ticketkäufen</h3>
+    <p>Milligate vermittelt Tickets im Namen der jeweiligen Veranstalter. Der Vertrag über den Eventbesuch kommt zwischen dir und dem Veranstalter zustande, der im Event und auf deinem Beleg angegeben ist.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© <span id="year">2026</span> Milligate · Eren Ketan, Linz</div>
+    <div class="flinks">
+      <a href="#support">Support</a>
+      <a href="#datenschutz">Datenschutz</a>
+      <a href="#konto-loeschen">Konto löschen</a>
+      <a href="#impressum">Impressum</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('menuBtn'),nav=document.getElementById('nav');
+  btn.addEventListener('click',function(){var o=nav.classList.toggle('open');btn.setAttribute('aria-expanded',o?'true':'false');});
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');btn.setAttribute('aria-expanded','false');});});
+  document.getElementById('year').textContent=new Date().getFullYear();
+  var qr=document.getElementById('qr'),n=21,seed=7,html='';
+  function rnd(){seed=(seed*9301+49297)%233280;return seed/233280;}
+  function finder(r,c){var rr=[[0,0],[0,14],[14,0]];for(var i=0;i<3;i++){var y=r-rr[i][0],x=c-rr[i][1];if(y>=0&&y<7&&x>=0&&x<7){return (y===0||y===6||x===0||x===6||(y>=2&&y<=4&&x>=2&&x<=4))?1:0;}}return -1;}
+  for(var r=0;r<n;r++){for(var c=0;c<n;c++){var f=finder(r,c);var on=f===-1?(rnd()>.52):f===1;html+=on?'<i></i>':'<b></b>';}}
+  qr.innerHTML=html;
+})();
+</script>
+</body>
+</html>
