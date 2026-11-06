@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://milligate.at/sitemap.xml
+Sitemap: https://milligateapp.com/sitemap.xml

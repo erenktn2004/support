@@ -80,7 +80,8 @@ nav.main a.btn-line{color:var(--ink)}
 .bars{display:flex;align-items:flex-end;gap:7px;height:96px;padding:10px 4px 0;border-bottom:1px solid var(--line);margin-bottom:12px}
 .bars i{flex:1;border-radius:6px 6px 2px 2px;background:linear-gradient(180deg,#7C4DFF,#1E8FD0)}
 .dash-row{display:flex;justify-content:space-between;font-size:13px;padding:7px 0;border-bottom:1px dashed var(--line)}
-.dash-row:last-child{border:0}
+.dash-row:last-of-type{border:0}
+.dash-note{margin-top:10px;font-size:11px;color:var(--muted,#6b6880);text-align:center}
 .dash-row span:last-child{font-weight:700}
 
 section.block{padding:96px 0}
