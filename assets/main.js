@@ -105,7 +105,7 @@
         msg.textContent = 'Bitte fülle die Pflichtfelder aus und bestätige die Einwilligung.';
         return;
       }
-      var data = { type: form.getAttribute('data-form'), consent: true, source: location.pathname };
+      var data = { type: form.getAttribute('data-form'), consent: true, source: (location.pathname + location.search).slice(0, 80) };
       Array.prototype.forEach.call(form.elements, function (el) {
         if (el.name && el.name !== 'consent') data[el.name] = el.value;
       });

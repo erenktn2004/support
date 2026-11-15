@@ -45,7 +45,7 @@
     <a class="brand" href="./"><img src="assets/img/logo-96.png" width="34" height="34" alt="">Milligate</a>
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menü</button>
     <nav class="main" id="nav" aria-label="Main">
-      <a href="veranstalter/">Für Veranstalter</a><a href="preise/">Preise</a><a href="besucher/">Für Besucher</a><a href="support/">Hilfe</a>
+      <a href="veranstalter/">Für Veranstalter</a><a href="preise/">Preise</a><a href="besucher/">Für Besucher</a><a class="nav-partner" href="partner/">Partner werden</a><a href="support/">Hilfe</a>
       <div class="nav-cta">
         <a class="lang" href="en/" hreflang="en" lang="en" title="English">EN</a>
         <a class="btn btn-line btn-sm" href="https://studio.milligateapp.com/login">Login</a>
@@ -60,7 +60,7 @@
     <span class="eyebrow">Ticketing aus Oberösterreich</span>
     <h1>Tickets online verkaufen – und 100&nbsp;% vom Ticketpreis behalten.</h1>
     <p class="lead">Milligate ist die Ticket-Plattform für Veranstalter in Österreich: Event anlegen, Sitzplan oder Stehplätze festlegen, verkaufen, am Einlass scannen. Ohne Grundgebühr, ohne Vertrag.</p>
-    <div class="actions"><a class="btn btn-white" href="https://studio.milligateapp.com/register">Kostenlos starten</a><a class="btn btn-ghost" href="preise/">So funktionieren die Preise</a></div>
+    <div class="actions"><a class="btn btn-white" href="https://studio.milligateapp.com/register">Kostenlos starten</a><a class="btn btn-ghost" href="#partner">Persönlich einrichten lassen</a></div>
     <div class="proof"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>0&nbsp;€ Grundgebühr</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>100&nbsp;% Ticketerlös für dich</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Auszahlung über Stripe</span></div>
   </div>
   <div class="dash" aria-hidden="true">
@@ -112,9 +112,37 @@
   <div class="wallet">Zu Wallet hinzufügen</div>
 </div></div>
 </div></section>
+<section class="block alt" id="partner"><div class="wrap split partner-split">
+  <div>
+    <div class="head" style="margin-bottom:24px"><div class="kicker">Partner werden</div><h2>Wir suchen die ersten Veranstalter in Oberösterreich</h2><p>Milligate startet in Kürze. Leg dein Event schon jetzt an – wir richten es in einem kurzen Videocall gemeinsam mit dir ein, und der Vorverkauf startet mit dem App-Launch.</p></div>
+    <ul class="checks"><li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span><strong>0 € für dich:</strong> keine Grundgebühr, kein Vertrag, 100 % vom Ticketpreis</span></li><li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Persönliche Einrichtung:</strong> Event, Sitzplan, Parkplätze und Scanner-Zugänge</span></li><li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Am Event-Abend erreichbar:</strong> wir lassen dich beim Einlass nicht allein</span></li></ul>
+  </div>
+  <div class="form-card reveal">
+    <h2>Unverbindlich anfragen</h2>
+    <p class="form-sub">Ich melde mich innerhalb von 24 Stunden bei dir.</p>
+    <form class="form" data-form="partner" novalidate>
+      <div class="field"><label for="h-name">Name *</label><input id="h-name" name="name" autocomplete="name" required maxlength="120"></div>
+      <div class="field"><label for="h-org">Verein, Firma oder Veranstaltung</label><input id="h-org" name="organization" autocomplete="organization" maxlength="160"></div>
+      <div class="row2">
+        <div class="field"><label for="h-mail">E-Mail *</label><input id="h-mail" name="email" type="email" autocomplete="email" required maxlength="254"></div>
+        <div class="field"><label for="h-tel">Telefon</label><input id="h-tel" name="phone" type="tel" autocomplete="tel" maxlength="40"></div>
+      </div>
+      <div class="field"><label for="h-event">Welches Event?</label><input id="h-event" name="event_name" maxlength="160" placeholder="z. B. Maturaball, Clubnacht, Konzert"></div>
+      <div class="row2">
+        <div class="field"><label for="h-date">Wann ungefähr?</label><input id="h-date" name="event_date" maxlength="40" placeholder="z. B. Februar 2027"></div>
+        <div class="field"><label for="h-guests">Erwartete Gäste</label><select id="h-guests" name="expected_guests"><option value="">Bitte wählen</option><option>unter 150</option><option>150–500</option><option>500–1.000</option><option>über 1.000</option></select></div>
+      </div>
+      <div class="field"><label for="h-msg">Nachricht</label><textarea id="h-msg" name="message" rows="3" maxlength="2000"></textarea></div>
+      <div class="hp" aria-hidden="true"><label for="h-web">Website</label><input id="h-web" name="website" tabindex="-1" autocomplete="off"></div>
+      <label class="check"><input type="checkbox" name="consent" required><span>Ich bin damit einverstanden, dass mich Milligate (Eren Ketan, Linz) per E-Mail und Telefon zu meiner Anfrage kontaktiert und mir Informationen zu Milligate für Veranstalter schickt. Diese Einwilligung kann ich jederzeit per E-Mail an ketaneren@gmail.com widerrufen. Mehr in der <a href="datenschutz/">Datenschutzerklärung</a>.</span></label>
+      <button class="btn btn-dark" type="submit">Anfrage senden</button>
+      <p class="form-msg" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</div></section>
 <section class="block"><div class="wrap"><div class="cta-band reveal">
   <div><h2>Dein nächstes Event verkauft sich nicht von allein.</h2><p>Leg es in wenigen Minuten an – ohne Vertrag, ohne Grundgebühr, ohne Risiko.</p></div>
-  <div class="actions"><a class="btn btn-grad" href="https://studio.milligateapp.com/register">Kostenlos starten</a><a class="btn btn-ghost" href="mailto:ketaneren@gmail.com?subject=Milligate%20Demo">Demo anfragen</a></div>
+  <div class="actions"><a class="btn btn-grad" href="https://studio.milligateapp.com/register">Kostenlos starten</a><a class="btn btn-ghost" href="partner/">Persönlich einrichten lassen</a></div>
 </div></div></section>
 </main>
 <footer class="site">
