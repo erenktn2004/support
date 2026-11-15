@@ -118,7 +118,7 @@
           msg.className = 'form-msg ok';
           msg.textContent = data.type === 'waitlist'
             ? 'Fast geschafft! Wir haben dir eine E-Mail geschickt. Bitte bestätige deine Adresse über den Link darin.'
-            : 'Danke! Deine Anfrage ist angekommen. Ich melde mich innerhalb von 24 Stunden bei dir.';
+            : 'Danke! Deine Anfrage ist angekommen. Wir melden uns so bald wie möglich bei dir.';
         })
         .catch(function (err) {
           msg.className = 'form-msg err';
