@@ -118,7 +118,9 @@
           msg.className = 'form-msg ok';
           msg.textContent = data.type === 'waitlist'
             ? 'Fast geschafft! Wir haben dir eine E-Mail geschickt. Bitte bestätige deine Adresse über den Link darin.'
-            : 'Danke! Deine Anfrage ist angekommen. Wir melden uns so bald wie möglich bei dir.';
+            : data.type === 'lead'
+              ? 'Check dein Postfach! Über den Link in der E-Mail bestätigst du deine Adresse und lädst die Checkliste herunter.'
+              : 'Danke! Deine Anfrage ist angekommen. Wir melden uns so bald wie möglich bei dir.';
         })
         .catch(function (err) {
           msg.className = 'form-msg err';
@@ -144,4 +146,22 @@
       box.hidden = false;
     }
   }
+})();
+(function () {
+  var ids = ['pc-fix', 'pc-var', 'pc-guests', 'pc-goal'];
+  var els = ids.map(function (id) { return document.getElementById(id); });
+  if (els.some(function (e) { return !e; })) return;
+  var fmt = new Intl.NumberFormat('de-AT', { style: 'currency', currency: 'EUR' });
+  var num = function (e) { return Math.max(0, parseFloat(String(e.value).replace(',', '.')) || 0); };
+  var update = function () {
+    var fix = num(els[0]), variable = num(els[1]), guests = Math.max(1, Math.floor(num(els[2]))), goal = num(els[3]);
+    var breakEven = fix / guests + variable;
+    var target = (fix + goal) / guests + variable;
+    var fee = Math.min(2.49, 1.29 + Math.round(target * 2) / 100);
+    document.getElementById('pc-break').textContent = fmt.format(Math.ceil(breakEven * 100) / 100);
+    document.getElementById('pc-target').textContent = fmt.format(Math.ceil(target * 100) / 100);
+    document.getElementById('pc-buyer').textContent = fmt.format(Math.ceil(target * 100) / 100 + fee);
+  };
+  els.forEach(function (e) { e.addEventListener('input', update); });
+  update();
 })();
