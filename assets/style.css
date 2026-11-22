@@ -323,3 +323,11 @@ nav.main a.nav-partner{color:var(--violet-2)}
 @media (max-width:860px){.uses{grid-template-columns:1fr 1fr}.lead-box{grid-template-columns:1fr}.calc-grid{grid-template-columns:1fr 1fr}.calc-out{grid-template-columns:1fr}}
 @media (max-width:560px){.uses{grid-template-columns:1fr}.calc-grid{grid-template-columns:1fr}}
 .calc-box .note-dark{color:#bcb9d4}
+
+.founder-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.founder{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px 22px;position:relative;overflow:hidden}
+.founder::before{content:"";position:absolute;left:0;top:0;right:0;height:4px;background:var(--grad)}
+.founder h3{margin:4px 0 8px;font-size:17px}
+.founder p{margin:0;color:var(--muted);font-size:15px}
+@media (max-width:980px){.founder-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:620px){.founder-grid{grid-template-columns:1fr}}
