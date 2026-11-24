@@ -50,7 +50,7 @@
     var update = function () {
       var p = Math.max(0, parseFloat(String(price.value).replace(',', '.')) || 0);
       var q = Math.max(0, Math.floor(parseFloat(qty.value) || 0));
-      document.getElementById('oBuyer').textContent = fmt.format(p + Math.min(2.49, 1.29 + Math.round(p * 2) / 100));
+      document.getElementById('oBuyer').textContent = fmt.format(p + Math.min(6.99, 0.89 + Math.round(p * 2.9) / 100));
       document.getElementById('oFee').textContent = fmt.format(0);
       document.getElementById('oPerTicket').textContent = fmt.format(p);
       document.getElementById('oTotal').textContent = fmt.format(p * q);
@@ -157,7 +157,7 @@
     var fix = num(els[0]), variable = num(els[1]), guests = Math.max(1, Math.floor(num(els[2]))), goal = num(els[3]);
     var breakEven = fix / guests + variable;
     var target = (fix + goal) / guests + variable;
-    var fee = Math.min(2.49, 1.29 + Math.round(target * 2) / 100);
+    var fee = Math.min(6.99, 0.89 + Math.round(target * 2.9) / 100);
     document.getElementById('pc-break').textContent = fmt.format(Math.ceil(breakEven * 100) / 100);
     document.getElementById('pc-target').textContent = fmt.format(Math.ceil(target * 100) / 100);
     document.getElementById('pc-buyer').textContent = fmt.format(Math.ceil(target * 100) / 100 + fee);
