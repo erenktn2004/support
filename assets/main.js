@@ -1,4 +1,12 @@
 (function () {
+  var self = document.currentScript;
+  if (!self || !self.src) return;
+  var s = document.createElement('script');
+  s.src = self.src.replace(/main\.js.*$/, 'support-chat.js');
+  s.defer = true;
+  document.head.appendChild(s);
+})();
+(function () {
   var btn = document.getElementById('menuBtn');
   var nav = document.getElementById('nav');
   if (btn && nav) {
